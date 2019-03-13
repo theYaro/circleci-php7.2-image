@@ -20,3 +20,6 @@ RUN pip install ansible
 RUN curl -LO https://deployer.org/deployer.phar && \
     mv deployer.phar /usr/local/bin/dep && \
     chmod +x /usr/local/bin/dep
+
+# Install MySQL client
+RUN apt-get install mysql-client
