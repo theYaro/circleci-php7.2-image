@@ -22,4 +22,4 @@ RUN curl -LO https://deployer.org/deployer.phar && \
     chmod +x /usr/local/bin/dep
 
 # Install MySQL client
-RUN apt-get install mysql-client
+RUN apt-get install default-mysql-client
