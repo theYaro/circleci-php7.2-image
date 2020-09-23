@@ -1,6 +1,6 @@
-FROM circleci/php:7.2-node-browsers
+FROM circleci/php:7.3-node-browsers
 
-MAINTAINER mail@nikitakiselev.ru
+MAINTAINER yaroslav@shvetsov.ru
 
 USER root
 
