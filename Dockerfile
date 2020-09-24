@@ -23,8 +23,8 @@ RUN docker-php-ext-configure gd \
     --with-webp-dir=/usr/include/ \
     --with-jpeg-dir=/usr/include/ \
     --with-png-dir=/usr/include/ \
-    --with-zlib-dir=/usr/include/ \
-    --with-xpm-dir=/usr/include/ \
+    --with-zlib-dir \
+    --with-xpm-dir \
     --with-freetype-dir
 
 RUN docker-php-ext-install \
