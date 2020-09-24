@@ -25,8 +25,7 @@ RUN docker-php-ext-configure gd \
     --with-png-dir=/usr/include/ \
     --with-zlib-dir=/usr/include/ \
     --with-xpm-dir=/usr/include/ \
-    --with-freetype-dir \
-    --enable-gd-native-ttf
+    --with-freetype-dir
 
 RUN docker-php-ext-install \
     zip \
