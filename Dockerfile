@@ -12,7 +12,7 @@ RUN apt-get install -y \
     libpng-dev \
 	libfreetype6-dev \
     libwebp-dev \
-    libjpeg-turbo-dev \
+    libjpeg62-turbo-dev \
     libpng-dev \
     libxpm-dev \
     libgmp-dev \
