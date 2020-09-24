@@ -6,7 +6,33 @@ USER root
 
 RUN apt-get update
 
-RUN docker-php-ext-install zip pdo_mysql
+RUN apt-get upgrade -y
+
+RUN apt-get install -y \
+    libpng-dev \
+	libfreetype6-dev \
+    libwebp-dev \
+    libjpeg-turbo-dev \
+    libpng-dev \
+    libxpm-dev \
+    libgmp-dev \
+	libfreetype6-dev
+
+RUN docker-php-ext-configure gd \
+	--with-gd \
+    --with-webp-dir=/usr/include/ \
+    --with-jpeg-dir=/usr/include/ \
+    --with-png-dir=/usr/include/ \
+    --with-zlib-dir=/usr/include/ \
+    --with-xpm-dir=/usr/include/ \
+    --with-freetype-dir \
+    --enable-gd-native-ttf
+
+RUN docker-php-ext-install \
+    zip \
+    pdo_mysql \
+    bcmath \
+    gd
 
 RUN apt-get install -y \
 	software-properties-common \
